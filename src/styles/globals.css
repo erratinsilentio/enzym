@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Comfortaa:wght@300;500&family=Genos&family=MedievalSharp&family=Montserrat:wght@100&family=Playfair+Display:ital,wght@1,800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Genos:ital@1&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&display=swap");
-
-@font-face {
-  font-family: "carta";
-  src: url("../../public/CloisterBlackLight-axjg.ttf") format("ttf")
-    format("truetype");
-}
-
 :root {
   font-family: "Abel";
   font-size: 16px;
@@ -55,7 +43,6 @@ body {
   position: absolute;
   font-weight: 800;
   font-size: 6rem;
-  /* right: 5%; */
   transition-duration: 1s;
   bottom: 45%;
   z-index: 1;
@@ -106,13 +93,11 @@ body {
   left: 40%;
   transform: translate(-50%, 0);
   transition-duration: 0.5s;
-  /* outline: 1px solid yellow; */
 }
 
 .splineClosed {
   position: absolute;
   left: 55%;
   transform: translate(-50%, 0);
-
   transition-duration: 0.5s;
 }
