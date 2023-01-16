@@ -22,7 +22,7 @@ export const useMenuContext = () => {
   const ctx = useContext(MenuContext);
 
   if (!ctx) {
-    throw new Error("Missing themeContext, it's not wrapped in ThemeProvider");
+    throw new Error("Missing MenuContext, it's not wrapped in MenuProvider");
   }
   return ctx;
 };
