@@ -1,0 +1,19 @@
+.open {
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%, 0);
+  transition-duration: 0.5s;
+}
+
+.closed {
+  position: absolute;
+  left: 55%;
+  transform: translate(-50%, 0);
+  transition-duration: 0.5s;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

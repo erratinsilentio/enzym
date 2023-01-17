@@ -1,10 +1,9 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Spline from "@splinetool/react-spline";
-import { useRef } from "react";
 import { SlMenu } from "react-icons/Sl";
 import { useMenuContext } from "../utils/MenuContext";
+import { Menu } from "../components/home/Menu";
+import { SplineUI } from "../components/home/Spline";
 
 const Home: NextPage = () => {
   const { toggleOpen, isOpen } = useMenuContext();
@@ -17,21 +16,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className="main flex items-start justify-start">
-        <Spline
-          scene="https://prod.spline.design/PSOHRGJ0t7vihQtp/scene.splinecode"
-          className={isOpen ? "splineOpen" : "splineClosed"}
-        />
+        <SplineUI isOpen={isOpen} />
         <SlMenu className="hamburger" onClick={toggleOpen} />
-        <article className={isOpen ? "text open" : "text closed"}>
-          ABOUT
-        </article>
-        <article className={isOpen ? "text2 open" : "text2 closed"}>
-          MY WORK
-        </article>
-        <section className={isOpen ? "text3 open" : "text3 closed"}>
-          <article className="contact">CONTACT</article>
-          <article className="me">ME</article>
-        </section>
+        <Menu isOpen={isOpen} />
       </main>
     </>
   );
