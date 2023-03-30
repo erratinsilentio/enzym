@@ -10,7 +10,7 @@ export const SplineUI = () => {
     >
       <Spline
         scene="https://prod.spline.design/PSOHRGJ0t7vihQtp/scene.splinecode"
-        className={style.closed}
+        className={style.spline}
       />
     </Suspense>
   );

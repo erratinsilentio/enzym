@@ -1,9 +1,10 @@
 .spline {
   position: absolute;
-  top: 10%;
-  left: 55%;
+  top: 0%;
+  left: 58%;
   transform: translate(-50%, 0);
   transition-duration: 0.5s;
+  z-index: -1;
 }
 
 .loader {

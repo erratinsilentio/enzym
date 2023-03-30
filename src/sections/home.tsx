@@ -17,11 +17,18 @@ export const Page = () => {
         >
           enzym
         </motion.p>
-        <motion.div className={style.menu}>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ duration: 1, delay: 2.0 }}
+          className={style.menu}
+        >
+          <li>home</li>
+          <li>about</li>
+          <li>portfolio</li>
+          <li>contact</li>
         </motion.div>
 
         <motion.span
@@ -34,6 +41,7 @@ export const Page = () => {
           className={style.line}
         ></motion.span>
       </article>
+      <img src="/squik2.svg" alt="fractal" className={style.fractal} />
     </section>
   );
 };

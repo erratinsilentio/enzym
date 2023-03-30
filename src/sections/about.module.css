@@ -16,8 +16,8 @@
 
 .hero {
   position: absolute;
-  left: 18%;
-  top: 35%;
+  left: 17%;
+  top: 25%;
   transition: transform 0.5s ease-out;
   font-weight: 900;
 }

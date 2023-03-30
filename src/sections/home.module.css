@@ -1,17 +1,24 @@
 .section {
   width: 100vw;
-  height: 100vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 
 .logo {
   font-size: 3rem;
+  font-weight: 100;
   background: #c1c1d4;
   background: repeating-linear-gradient(to right, #c1c1d4 0%, #cd8bcf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 5;
+  position: absolute;
+  top: 10%;
+  left: 45.5%;
+  transform: translate(-50%);
 }
 
 .box {
@@ -20,10 +27,27 @@
 
 .line {
   position: absolute;
-  top: 15%;
+  top: 150%;
   left: 50%;
   width: 90vw;
-  background-color: beige;
+  background-color: pink;
   height: 0.5px;
   transform: translate(-50%, 50%);
+}
+
+.menu {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  width: 90vw;
+  z-index: 0;
+  color: antiquewhite;
+}
+
+.fractal {
+  position: absolute;
+  top: 0px;
+  opacity: 0.5;
 }
