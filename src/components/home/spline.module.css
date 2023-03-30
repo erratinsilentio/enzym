@@ -1,12 +1,6 @@
-.open {
+.spline {
   position: absolute;
-  left: 40%;
-  transform: translate(-50%, 0);
-  transition-duration: 0.5s;
-}
-
-.closed {
-  position: absolute;
+  top: 10%;
   left: 55%;
   transform: translate(-50%, 0);
   transition-duration: 0.5s;
