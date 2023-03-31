@@ -25,10 +25,10 @@ export const Page = () => {
           transition={{ duration: 1, delay: 2.0 }}
           className={style.menu}
         >
-          <li>home</li>
-          <li>about</li>
-          <li>portfolio</li>
-          <li>contact</li>
+          <li className={style.menubtn}>home</li>
+          <li className={style.menubtn}>about</li>
+          <li className={style.menubtn}>portfolio</li>
+          <li className={style.menubtn}>contact</li>
         </motion.div>
 
         <motion.span

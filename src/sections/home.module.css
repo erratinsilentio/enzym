@@ -46,10 +46,26 @@
   width: 50vw;
   z-index: 0;
   color: antiquewhite;
+  z-index: 150;
 }
 
 .fractal {
   position: absolute;
   top: 0px;
   opacity: 0.5;
+}
+
+.menubtn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.1rem;
+
+  border-radius: 15px;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+
+.menubtn:hover {
+  background-color: antiquewhite;
+  color: black;
 }
