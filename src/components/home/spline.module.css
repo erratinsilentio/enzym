@@ -1,6 +1,6 @@
 .spline {
   position: absolute;
-  top: 0%;
+  top: 5%;
   left: 58%;
   transform: translate(-50%, 0);
   transition-duration: 0.5s;

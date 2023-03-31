@@ -16,8 +16,8 @@
   -webkit-text-fill-color: transparent;
   z-index: 5;
   position: absolute;
-  top: 10%;
-  left: 45.5%;
+  top: 45%;
+  left: 8%;
   transform: translate(-50%);
 }
 
@@ -39,9 +39,11 @@
   margin-top: 4rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
-  width: 90vw;
+  position: absolute;
+  right: 5%;
+  width: 50vw;
   z-index: 0;
   color: antiquewhite;
 }
