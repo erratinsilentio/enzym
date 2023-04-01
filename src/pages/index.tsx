@@ -1,7 +1,8 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import About from "../sections/about";
-import { Page } from "../sections/home";
+import About from "../sections/about/about";
+import { Page } from "../sections/home/home";
+import { Portfolio } from "../sections/portfolio/portfolio";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <main className="main flex flex-col items-start justify-start">
         <Page />
         <About />
+        <Portfolio />
       </main>
     </>
   );
