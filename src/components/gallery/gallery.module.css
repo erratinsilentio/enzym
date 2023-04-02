@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4vmin;
+  width: 80vw;
+}
+
+.image {
+  width: 22vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.image:hover {
+  width: 30vmin;
+  height: 60vmin;
+}

@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import About from "../sections/about/about";
-import { Page } from "../sections/home/home";
+import { Header } from "../sections/header/header";
 import { Portfolio } from "../sections/portfolio/portfolio";
 
 const Home: NextPage = () => {
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className="main flex flex-col items-start justify-start">
-        <Page />
+        <Header />
         <About />
         <Portfolio />
       </main>
