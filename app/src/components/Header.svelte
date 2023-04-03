@@ -18,7 +18,8 @@
   .header {
     min-width: 100vw;
     height: 12vh;
-    position: relative;
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
