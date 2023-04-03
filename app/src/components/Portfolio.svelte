@@ -28,11 +28,22 @@
   ];
 
   let gallery = "gallery";
+  let youtube = "frame";
 
   function handleClick() {
     gallery === "gallery"
       ? (gallery = "gallery hidden")
       : (gallery = "gallery");
+  }
+
+  function handleClickTwo() {
+    youtube === "frame" ? (youtube = "frame closed") : (youtube = "frame");
+
+    setTimeout(() => {
+      gallery === "gallery"
+        ? (gallery = "gallery hidden")
+        : (gallery = "gallery");
+    }, 1000);
   }
 </script>
 
@@ -43,7 +54,7 @@
     {/each}
   </section>
   {#if gallery === "gallery hidden"}
-    <section class="frame">
+    <section class={youtube}>
       <iframe
         width="560"
         height="315"
@@ -53,6 +64,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       />
+      <button class="close" on:click={handleClickTwo}>x</button>
     </section>
   {/if}
 </main>
@@ -80,7 +92,7 @@
     background-color: #09090b;
     border-top: 0.1px solid rgb(255, 191, 202, 0.5);
     border-bottom: 0.1px solid rgb(255, 191, 202, 0.5);
-    animation: appear 1.5s forwards ease-in-out;
+    animation: appear 1s forwards ease-in-out;
   }
 
   .hidden {
@@ -153,5 +165,32 @@
     100% {
       height: 60vh;
     }
+  }
+
+  @keyframes close {
+    0% {
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    100% {
+      height: 0px;
+      opacity: 0;
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+  .closed {
+    animation: close 1s forwards ease-in;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: beige;
+    background-color: transparent;
+    cursor: pointer;
   }
 </style>
