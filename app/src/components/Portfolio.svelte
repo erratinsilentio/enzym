@@ -42,12 +42,26 @@
       <img src={movie.src} alt="movie" class="image" on:click={handleClick} />
     {/each}
   </section>
+  {#if gallery === "gallery hidden"}
+    <section class="frame">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eAAEp4jQYug"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      />
+    </section>
+  {/if}
 </main>
 
 <style>
   .main {
     width: 100vw;
     height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,12 +78,13 @@
     align-items: center;
     gap: 0.5rem;
     background-color: #09090b;
-    border-top: 0.1px solid pink;
-    border-bottom: 0.1px solid pink;
+    border-top: 0.1px solid rgb(255, 191, 202, 0.5);
+    border-bottom: 0.1px solid rgb(255, 191, 202, 0.5);
+    animation: appear 1.5s forwards ease-in-out;
   }
 
   .hidden {
-    animation: hide 0.8s forwards;
+    animation: hide 0.5s forwards ease-in;
   }
 
   @keyframes hide {
@@ -104,5 +119,39 @@
     position: absolute;
     width: 110vw;
     top: 187%;
+  }
+
+  .frame {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+
+    margin-top: 10rem;
+    width: 80vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #09090b;
+    border-top: 0.1px solid rgb(255, 191, 202, 0.5);
+    border-bottom: 0.1px solid rgb(255, 191, 202, 0.5);
+    animation: appear 1.5s forwards ease-in-out;
+  }
+
+  @keyframes appear {
+    0% {
+      height: 0vh;
+      opacity: 0;
+      overflow-y: hidden;
+      display: none;
+    }
+
+    100% {
+      height: 60vh;
+    }
   }
 </style>

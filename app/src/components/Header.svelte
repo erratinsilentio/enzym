@@ -19,6 +19,7 @@
     min-width: 100vw;
     height: 12vh;
     position: fixed;
+    z-index: 100;
     top: 0;
     display: flex;
     align-items: center;
