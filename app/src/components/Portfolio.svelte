@@ -39,22 +39,11 @@
 <main class="main">
   <section class={gallery}>
     {#each movies as movie}
-      <img src={movie.src} alt="movie" class={image} on:click={handleClick} />
+      <a href={movie.link} target="_blank">
+        <img src={movie.src} alt="movie" class={image} />
+      </a>
     {/each}
   </section>
-  {#if gallery === "gallery hidden"}
-    <section class={youtube}>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/eAAEp4jQYug"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      />
-    </section>
-  {/if}
 </main>
 
 <style>
@@ -112,7 +101,7 @@
 
   .image:hover {
     width: 18vw;
-    height: 65vh;
+    /* height: 65vh; */
   }
 
   .clicked {
