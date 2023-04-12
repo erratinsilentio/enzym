@@ -6,6 +6,8 @@
 
 body {
   background-color: #18181b;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 button {

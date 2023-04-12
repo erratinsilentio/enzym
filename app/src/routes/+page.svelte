@@ -4,6 +4,7 @@
   import { Application } from "@splinetool/runtime";
   import { onMount } from "svelte";
   import Portfolio from "../components/Portfolio.svelte";
+  import Contact from "../components/Contact.svelte";
 
   onMount(() => {
     const article = document.getElementById("article");
@@ -19,10 +20,15 @@
   <Header />
   <About />
   <Portfolio />
+  <Contact />
   <article class="article" id="article" />
 </section>
 
 <style>
+  .section {
+    width: 100vw;
+    overflow: hidden;
+  }
   .article {
     width: 100vw;
     height: 100vh;

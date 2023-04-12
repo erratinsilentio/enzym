@@ -28,29 +28,18 @@
   ];
 
   let gallery = "gallery";
+  let image = "image";
   let youtube = "frame";
 
   function handleClick() {
-    gallery === "gallery"
-      ? (gallery = "gallery hidden")
-      : (gallery = "gallery");
-  }
-
-  function handleClickTwo() {
-    youtube === "frame" ? (youtube = "frame closed") : (youtube = "frame");
-
-    setTimeout(() => {
-      gallery === "gallery"
-        ? (gallery = "gallery hidden")
-        : (gallery = "gallery");
-    }, 1000);
+    image === "image" ? (image = "clicked") : (image = "image");
   }
 </script>
 
 <main class="main">
   <section class={gallery}>
     {#each movies as movie}
-      <img src={movie.src} alt="movie" class="image" on:click={handleClick} />
+      <img src={movie.src} alt="movie" class={image} on:click={handleClick} />
     {/each}
   </section>
   {#if gallery === "gallery hidden"}
@@ -64,7 +53,6 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       />
-      <button class="close" on:click={handleClickTwo}>x</button>
     </section>
   {/if}
 </main>
@@ -127,6 +115,16 @@
     height: 65vh;
   }
 
+  .clicked {
+    width: 40vw;
+    height: 65vh;
+    object-fit: cover;
+    object-position: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    clip-path: inset(2rem 0 2rem 0);
+  }
+
   .wave {
     position: absolute;
     width: 110vw;
@@ -154,43 +152,23 @@
     animation: appear 1.5s forwards ease-in-out;
   }
 
-  @keyframes appear {
+  @keyframes makeYT {
     0% {
-      height: 0vh;
-      opacity: 0;
-      overflow-y: hidden;
-      display: none;
+      width: 18vw;
+      height: 65vh;
     }
 
     100% {
-      height: 60vh;
+      height: 65vh;
+      width: auto;
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
     }
   }
 
-  @keyframes close {
-    0% {
-      height: 60vh;
-      overflow: hidden;
-    }
-
-    100% {
-      height: 0px;
-      opacity: 0;
-      display: none;
-      overflow: hidden;
-    }
-  }
-
-  .closed {
-    animation: close 1s forwards ease-in;
-  }
-
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: beige;
-    background-color: transparent;
-    cursor: pointer;
+  .makeYt {
+    animation: makeYT 1s forwards ease-in;
   }
 </style>
